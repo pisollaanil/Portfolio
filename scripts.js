@@ -9,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Initialize EmailJS with your Public Key (User ID)
-  emailjs.init('qORUfUXu3OAgeElGb'); // Public Key
-
   // Contact form submission
   const contactForm = document.getElementById('contactForm');
   contactForm.addEventListener('submit', function (e) {
@@ -29,9 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
       message: message
     };
     console.log(formData);
-
     // Send email using EmailJS
-    emailjs.send('service_pn8wxvm', 'template_gqbmoc3', formData)
+    emailjs.send('service_pn8wxvm', 'template_ao5ueil', formData)
       .then(function(response) {
         alert(`Thank you, ${name}! Your message has been sent successfully.`);
         contactForm.reset();
